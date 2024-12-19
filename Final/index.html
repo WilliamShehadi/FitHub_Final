@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitHub</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #000; /* In case of error, the backup for background */
+    }
+    
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      animation: slideBackground 30s ease-in-out infinite;
+    }
+    
+    @keyframes slideBackground {
+      0% { background-image: url('assets/Trainer.jpg'); }
+      33% { background-image: url('assets/EquinoxYoga.jpg'); }
+      66% { background-image: url('assets/EquinoxSpa.jpg'); }
+      100% { background-image: url('assets/Trainer.jpg'); }
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+  
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm">
+    <div class="container">
+      <a class="navbar-brand text-yellow" href="#">FitHub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-yellow" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link text-yellow" href="#booking">Book Now</a></li>
+          <li class="nav-item"><a class="nav-link text-yellow" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-yellow" href="#about">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Intro Page -->
+  
+  <header class="hero">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <h1 class="display-4 text-white">Your Go-To Hub for Fitness and Wellness in NYC</h1>
+      <p class="lead text-white">Personal trainers, yoga instructors, and massage therapists in the heart of Manhattan.</p>
+      <a href="#services" class="btn btn-warning">Explore Services</a>
+    </div>
+  </header>
+
+  
+  <!-- Services  -->
+  
+  <section id="services" class="py-5 bg-black text-yellow" style="min-height: 100vh;">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color: #FFC85A;">Our Services</h2>
+      <div id="services-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+      <div class="carousel-item active">
+      <div class="row g-4">
+      <div class="col-md-4">
+      <div class="service-card p-4 text-center shadow-sm bg-dark"> 
+        <h4 class= mb-4 style="color: #FFC85A;">Personal Training</h4>
+              <p class="text-white">Work with expert trainers to achieve your fitness goals.</p>
+              <img src="assets/Trainer.jpg" alt="Personal Training" class="img-fluid rounded">
+              <a href="#booking" class="btn btn-warning mt-3">Make a Booking</a>
+      </div>
+       </div>
+         <div class="col-md-4">
+            <div class="service-card p-4 text-center shadow-sm bg-dark">
+               <h4 class= mb-4 style="color: #FFC85A;">Yoga Classes</h4>
+                  <p class="text-white">Find peace and flexibility with our yoga instructors.</p>
+                  <img src="assets/EquinoxYoga.jpg" alt="Yoga Classes" class="img-fluid rounded">
+                  <a href="#booking" class="btn btn-warning mt-3">Make a Booking</a>
+            </div>
+        </div>
+      <div class="col-md-4">
+      <div class="service-card p-4 text-center shadow-sm bg-dark">
+         <h4 class= mb-4 style="color: #FFC85A;">Massage Therapy</h4>
+              <p class="text-white">Relax and rejuvenate with professional massage services.</p>
+              <img src="assets/EquinoxSpa.jpg" alt="Massage Therapy" class="img-fluid rounded">
+              <a href="#booking" class="btn btn-warning mt-3">Make a Booking</a>
+          </div>
+        </div>
+      </div>
+      </div>
+          <div class="carousel-item">
+          <div class="row g-4">
+          <div class="col-md-4">
+          <div class="service-card p-4 text-center shadow-sm bg-dark">
+             <h4 class= mb-4 style="color: #FFC85A;">Equinox Classes</h4>
+                <p class="text-white">Premium fitness experiences with world-class trainers and amenities.</p>
+                <img src="assets/Gym.jpg" alt="Equinox Classes" class="img-fluid rounded">
+                <a href="#booking" class="btn btn-warning mt-3">Make a Booking</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+          <div class="service-card p-4 text-center shadow-sm bg-dark">
+              <h4 class= mb-4 style="color: #FFC85A;">SoulCycle Sessions</h4>
+                <p class="text-white">High-energy cycling classes to elevate your fitness journey.</p>
+                <img src="assets/SoulcycleSpin.jpg" alt="SoulCycle Sessions" class="img-fluid rounded">
+                <a href="#booking" class="btn btn-warning mt-3">Make a Booking</a>
+          </div>
+        </div>
+          <div class="col-md-4">
+          <div class="service-card p-4 text-center shadow-sm bg-dark">
+            <h4 class= mb-4 style="color: #FFC85A;">Manhattan Plaza Health Club</h4>
+              <p class="text-white">Comprehensive wellness services in the heart of the city.</p>
+              <img src="assets/Pool.jpg" alt="Manhattan Plaza Health Club" class="img-fluid rounded">
+              <a href="#booking" class="btn btn-warning mt-3">Make a Booking</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    /div>
+        
+    <button class="carousel-control-prev" type="button" data-bs-target="#services-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#services-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+ <!-- Booking Page -->
+  
+ <section id="booking" class="py-5 bg-dark text-yellow" style="min-height: 100vh;">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color: #FFC85A;">Booking Section</h2>
+      <h4 class="text-center text-white mb-4">Reserve Your Spot</h4>
+      <form id="booking-form" class="shadow p-4 bg-black text-white">
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" id="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="service" class="form-label">Service</label>
+          <select id="service" class="form-select" required>
+            <option value="personal-training">Personal Training</option>
+            <option value="yoga">Yoga Classes</option>
+            <option value="massage">Massage Therapy</option>
+            <option value="equinox">Equinox Classes</option>
+            <option value="soulcycle">SoulCycle Sessions</option>
+            <option value="manhattan-health">Manhattan Plaza Health Club</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="class-type" class="form-label">Class Type</label>
+          <select id="class-type" class="form-select">
+            <option value="None">Spa</option>
+            <option value="yoga">Yoga</option>
+            <option value="zumba">Zumba</option>
+            <option value="spin">Spin</option>
+            <option value="pilates">Pilates</option>
+            <option value="strength">Strength Training</option>
+            <option value="cardio">Cardio</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label">Select Date</label>
+          <input type="date" id="date" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-warning w-100">Submit</button>
+      </form>
+    </div>
+  </section>
+
+   <!-- Gyms in NYC section -->
+  
+   <section id="gyms" class="py-5 bg-black text-yellow" style="min-height: 100vh;">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color: #FFC85A;">Gyms in NYC</h2>
+      <p class="text-center text-white">Explore gyms around New York City using the map below:</p>
+      <div class="d-flex justify-content-center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d32966.718290701945!2d-74.00597919279316!3d40.734739519667976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgyms!5e0!3m2!1sen!2sae!4v1734565368376!5m2!1sen!2sae" 
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+ 
+   <!-- About Us section -->
+   
+   <section id="about" class="py-5 bg-dark text-yellow" style="min-height: 100vh;">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color: #FFC85A;">About Us</h2>
+      <p class="text-white text-center">We are FitHub. We give you the chance to explore and book wellness services like personal training, yoga classes, massage, physiotherapy, and more!</p>
+      <p class="text-white text-center">We want our wellness services to be accessible to users of all fitness levels, whether they're beginners or seasoned practitioners.</p>
+      <p class="text-white text-center">We are not just a booking tool but a gateway to a healthier lifestyle, making fitness and wellness for everyone.</p>
+    </div>
+  </section>
+
+ 
+  <!-- Contact Us -->
+ 
+  <section id="contact" class="py-5 bg-black text-yellow" style="min-height: 100vh;">
+    <div class="container">
+      <h2 class="text-center mb-4" style="color: #FFC85A;">Contact Us</h2>
+      <p class="text-center text-white">For inquiries or more information, feel free to reach out.</p>
+      <ul class="list-unstyled text-center">
+        <li class="text-white">Phone: +1 917 794 1299</li>
+        <li class="text-white"><a href="#" class="text-yellow text-decoration-none">Instagram</a></li>
+        <li class="text-white"><a href="#" class="text-yellow text-decoration-none">Facebook</a></li>
+        <li class="text-white"><a href="mailto:ws2515@nyu.edu" class="text-yellow text-decoration-none">Gmail</a></li>
+      </ul>
+      <form id="contact-form" class="shadow p-4 bg-dark text-white">
+        <div class="mb-3">
+          <label for="contact-name" class="form-label">Full Name</label>
+          <input type="text" id="contact-name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="contact-email" class="form-label">Email</label>
+          <input type="email" id="contact-email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-warning w-100">Send Message</button>
+      </form>
+    </div>
+  </section>
+ 
+  <!-- Footer -->
+  
+  <footer class="py-3 bg-black text-center text-yellow">
+    <div class="container">
+      <p style="color: #FFC85A;">FitHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
